@@ -1,7 +1,7 @@
 const app = require('./app');
 const db = require('./models'); // Imports sequelize instance and models
 
-const PORT = process.env.POSTGRES_PORT || 3001;
+const PORT = process.env.POSTGRES_PORT || 3000;
 const HOST = process.env.POSTGRES_URL
 
 // Sync database and start server
