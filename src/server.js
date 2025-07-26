@@ -1,8 +1,8 @@
 const app = require('./app');
 const db = require('./models'); // Imports sequelize instance and models
 
-const PORT = process.env.POSTGRES_PORT || 3000;
-const HOST = process.env.POSTGRES_URL
+const PORT = process.env.PORT || 3000;
+const HOST = process.env.HOST;
 
 // Sync database and start server
 db.sequelize.sync({ 
@@ -12,7 +12,7 @@ db.sequelize.sync({
   console.log('Database synced successfully.');
   app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
-    console.log(`API available at ${HOST}${PORT}/api`);
+    console.log(`API available at ${HOST}:${PORT}/api`);
   });
 }).catch(err => {
   console.error('Unable to connect to the database or sync:', err);
