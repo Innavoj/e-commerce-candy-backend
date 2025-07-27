@@ -19,9 +19,9 @@ app.get('/', (req, res) => {
 });
 
 // Basic 404 handler
-app.use((req, res, next) => {
-  res.status(404).json({ message: 'Not Found' });
-});
+// app.use((req, res, next) => {
+//   res.status(404).json({ message: 'Not Found' });
+// });
 
 // Basic error handler
 app.use((err, req, res, next) => {
